@@ -12,5 +12,9 @@ app.post('/determine/hand', (req, res)=>{
     res.json({hand: controller(req.body.hand)})
 })
 
+app.post('/classify/hand', (req, res)=>{
+    res.json({hand: controller(req.body.hand)})
+})
+
 const PORT = process.env.PORT || 8000
 app.listen(PORT, ()=> console.log(`app listening on port ${PORT}`))
