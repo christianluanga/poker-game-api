@@ -16,16 +16,16 @@ const cards_map = {
 }
 
 const hands_map = {
-    '0': 'High card',
-    '1': 'One pair',
-    '2': 'Two pair',
-    '3': 'Three of a kind',
-    '4': 'Straight',
-    '5': 'Flush',
-    '6': 'Full house',
-    '7': 'Four of a kind',
-    '8': 'Straight flush',
-    '9': 'Five of a kind'
+    HIGH_CARD: 'High card',
+    ONE_PAIR: 'One pair',
+    TWO_PAIR: 'Two pair',
+    THREE_OF_A_KIND: 'Three of a kind',
+    STRAIGHT: 'Straight',
+    FLUSH: 'Flush',
+    FULL_HOUSE: 'Full house',
+    FOUR_OF_A_KIND: 'Four of a kind',
+    STRAIGHT_FLUSH: 'Straight flush',
+    FIVE_OF_A_KIND: 'Five of a kind'
 }
 export default cards_map
 export {hands_map}
