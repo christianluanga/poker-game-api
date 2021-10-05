@@ -2,7 +2,7 @@ import _ from 'lodash'
 import formatInput from './inputFormatter.mjs'
 import { hands_map as HANDS_MAP} from './map.mjs'
 import { is_straight , is_tree_of_a_kind} from './determineHand.mjs'
-const input = ["5C","5D","X","5S","5H"] // five of a kind
+//const input = ["5C","5D","X","5S","5H"] // five of a kind
 //const input = ["JC","10C","9C","8C","7C"] //straight flush
 //const input = ["5C","5D","5H","5S","2D"] // four a kind
 //const input = ["6S","6H","6D","KC","KH"] //full house
@@ -11,7 +11,10 @@ const input = ["5C","5D","X","5S","5H"] // five of a kind
 //const input = ["QC","QS","QH","9H","2S"] //three of a kind
 //const input = ["JH","JS","3C","3S","2H"] // two pair
 //const input = ["10S","10H","8S","7H","4C"] // one pair
-//const input = ["KD","QD","7S","4S","3H"] // high hand
+//const input = ["KD","QD","7S","4S","3H"] // high hand 
+
+export default (input)=>{
+
 let output_by_card = _.groupBy(formatInput(input), 'card');
 let output_by_shape =  _.groupBy(formatInput(input), 'shape')
 let dealt_hand
@@ -47,4 +50,5 @@ else{
     }
 }
 console.log(input, dealt_hand)
-
+return dealt_hand
+}
