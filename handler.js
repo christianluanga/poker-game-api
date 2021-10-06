@@ -1,7 +1,7 @@
 import _ from 'lodash'
-import formatInput from './inputFormatter.mjs'
-import { hands_map as HANDS_MAP} from './map.mjs'
-import { is_straight , is_tree_of_a_kind} from './determineHand.mjs'
+import formatInput from './inputFormatter.js'
+import { hands_map as HANDS_MAP} from './map.js'
+import { is_straight , is_tree_of_a_kind} from './determineHand.js'
 //const input = ["5C","5D","X","5S","5H"] // five of a kind
 //const input = ["JC","10C","9C","8C","7C"] //straight flush
 //const input = ["5C","5D","5H","5S","2D"] // four a kind
