@@ -1,5 +1,4 @@
 import _ from 'lodash'
-import { hands_map as HANDS_MAP} from '../constants/maps.js'
 
 /** @function isStraightHand
  * @param Array hand

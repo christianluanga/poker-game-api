@@ -3,9 +3,15 @@ import formatInput from './inputFormatter.js';
 import { hands_map as HANDS_MAP } from './constants/maps.js';
 import isFullHouseFiveOfKindOrFourOfAkind, { isStraightHand, isThreeOfAkind } from './utils/util.js';
 
-export default (input) => {
-  let output_by_card = _.groupBy(formatInput(input), 'card');
-  let output_by_shape = _.groupBy(formatInput(input), 'shape');
+export default (_hand) => {
+  const {valid, hand : validatedHand = []} = formatInput(_hand)
+  if(!valid) return {
+      valid,
+      message: `The supplied input is invalid. Make sure to send a valid input. Ex: JH,JS,3C,3S,2H.
+      or an array like ["JC","10C","9C","8C","7C"]`
+  }
+  let output_by_card = _.groupBy(validatedHand, 'card');
+  let output_by_shape = _.groupBy(validatedHand, 'shape');
   let dealt_hand;
   if (Object.keys(output_by_shape).length === 1) {
     dealt_hand = isStraightHand(Object.values(output_by_card))
@@ -33,6 +39,9 @@ export default (input) => {
     }
   }
   
-  console.log(input, dealt_hand);
-  return dealt_hand;
+  //console.log(validatedHand, dealt_hand);
+  return {
+      valid,
+      dealt_hand
+  };
 };
