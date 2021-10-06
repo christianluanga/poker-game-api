@@ -1,4 +1,4 @@
-import cards_map from './map.js'
+import cards_map from './constants/maps.js'
 export default (input)=>{
     return input.map((_card) =>{
         let card = cards_map[_card.slice(0,-1)] || cards_map[_card.slice(0,1)]

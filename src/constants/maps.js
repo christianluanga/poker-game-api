@@ -1,3 +1,6 @@
+/**Maps each card to an integer for ease of processing.
+ * The letter X presents a joker that is used to complete five of a kind hand
+ */
 const cards_map = {
     '2' : 2,
     '3' : 3,
@@ -12,9 +15,10 @@ const cards_map = {
     'Q' : 12,
     'K' : 13,
     'A' : 14,
-    'X' : 15 //the joker which represents a wild card in five of a kind
+    'X' : 15
 }
 
+/** @description Maps the a hand constant to the hand description name */
 const hands_map = {
     HIGH_CARD: 'High card',
     ONE_PAIR: 'One pair',
@@ -27,5 +31,18 @@ const hands_map = {
     STRAIGHT_FLUSH: 'Straight flush',
     FIVE_OF_A_KIND: 'Five of a kind'
 }
+
+const hands_hierarchy = {
+    HIGH_CARD: 0,
+    ONE_PAIR: 1,
+    TWO_PAIR: 2,
+    THREE_OF_A_KIND: 3,
+    STRAIGHT: 4,
+    FLUSH: 5,
+    FULL_HOUSE: 6,
+    FOUR_OF_A_KIND: 7,
+    STRAIGHT_FLUSH: 8,
+    FIVE_OF_A_KIND: 9
+}
 export default cards_map
-export {hands_map}
+export {hands_map, hands_hierarchy}
